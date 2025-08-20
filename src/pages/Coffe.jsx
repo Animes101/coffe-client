@@ -9,11 +9,6 @@ const Coffe = () => {
 
   const [coffes, setCoffes]=useState([])
 
-
-
-
-
-
   useEffect(()=>{
 
     fetch('http://localhost:3000/coffe')
