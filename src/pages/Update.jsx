@@ -1,5 +1,8 @@
 import React from 'react'
 import { useNavigate, useParams } from "react-router-dom";
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
+
 
 
 const Update = () => {
@@ -28,10 +31,15 @@ const Update = () => {
             .then((data) =>{
 
               if(data.data.modifiedCount>0){
-                navigate('/coffe')
+                Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Update data successfully ",
+                showConfirmButton: false,
+                timer: 1500
+              });
+              navigate('/coffe')
               }
-
-              
             });
 
     };
