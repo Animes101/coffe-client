@@ -1,0 +1,12 @@
+specVersion: "v1"
+serviceId: "client-cofe"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "client-cofe-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./example"]
